@@ -1,0 +1,11 @@
+language: csharp
+dotnet: 2.2
+solution: ./src/C346SpellBook_V_2.sln
+
+install: 
+  - dotnet restore
+
+scirpt:
+  - dotnet build
+  - dotnet test
+  
