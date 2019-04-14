@@ -1,7 +1,7 @@
 # Spellviewer For DND 5E
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/Cliftonz/SpellViewerV2?branch=master)](https://bettercodehub.com/)
-https://travis-ci.com/Cliftonz/SpellViewerV2.svg?branch=master
+[![Build Status](https://travis-ci.com/Cliftonz/SpellViewerV2.svg?branch=master)](https://travis-ci.com/Cliftonz/SpellViewerV2)
 
 Have you got tired of flipping through your PHB looking for your spells? Do you keep finding yourself putting your fingers in between your pages just so you can make a choice? Well, with Spellviewer you will have all of the spells at your finger tips. This application lists out all current spells, allows you to filter by class, spell level and specfic parts of the spell like if it is a ritual spell or a concentration spell, and display all components of a a spell. We have a few expansions planned that you can read about in the Future Expansion part down below and you can look at the different phases we plan to go through in the projects tab.
 
