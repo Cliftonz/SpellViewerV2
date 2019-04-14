@@ -1,11 +1,8 @@
+
 language: csharp
-dotnet: 2.2
-solution: ./src/C346SpellBook_V_2.sln
-
-install: 
+mono: none
+dotnet: 2.1.502
+solution: solution-name.sln
+script:
   - dotnet restore
-
-scirpt:
-  - dotnet build
   - dotnet test
-  
