@@ -4,5 +4,6 @@ mono: none
 dotnet: 2.2
 solution: ./src/C346SpellBook_V_2.sln
 script:
+  - dotnet add package MSTest.TestFramework --version 1.4.0 
   - dotnet restore
   - dotnet test
