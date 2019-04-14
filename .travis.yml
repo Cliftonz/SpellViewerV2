@@ -1,7 +1,17 @@
+
 language: csharp
-solution: "./src/C346SpellBook_V_2.sln"
+dotnet: 1.0.4
+mono: none # is not needed
+dist: trusty # Ubuntu 14.04.5 image
+env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
+addons:  
+ apt:
+   packages:
+   - libcurl3 # needed for 'dotnet restore'
+
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./src/C346SpellBook_V_2.sln
+   - dotnet restore ./src/C346SpellBook_V_2.sln
+
 script:
-- xbuild ./src/C346SpellBook_V_2.sln
-- mono ./Fibonacci/packages/xunit.runner.console*/tools/xunit.console.exe ./346SpellBook.Tests/UnitTest1.cs
+#    - dotnet build ./solution.sln --configuration Release
+    - find . -name *.xUnitTests.csproj -exec dotnet test {} --configuration Release \; # build and run xunit tests
