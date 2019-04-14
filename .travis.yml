@@ -1,9 +1,7 @@
-
 language: csharp
-mono: none
-dotnet: 2.2
-solution: ./src/C346SpellBook_V_2.sln
+solution: "./src/C346SpellBook_V_2.sln"
+install:
+- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./src/C346SpellBook_V_2.sln
 script:
-  - dotnet add package MSTest.TestFramework --version 1.4.0 
-  - dotnet restore
-  - dotnet test
+- xbuild ./src/C346SpellBook_V_2.sln
+- mono ./Fibonacci/packages/xunit.runner.console*/tools/xunit.console.exe ./346SpellBook.Tests/UnitTest1.cs
